@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panel de Control</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/presidente.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC:500" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand title" style="color: white;"><img src="controlpanel-logo.jpg" class="d-inline-block align-top" style="width: 30px; height: 30px;"> Panel de Control</a>
+		
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 text-center">
+				<br>
+				<h4 id="CurrentUserP">No user is signed in.</h4>
+				<hr class="my-4">
+
+				
+				<div class="form-group">
+					<label for="emailUserInput"></label>
+					<input type="email" id="emailUserInput" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<label for="passwordUserInput"></label>
+					<input type="password" id="passwordUserInput" placeholder="Password">
+				</div>
+				<button id="signInbtn" class="btn btn-success">Sign In</button>
+				<button class="btn btn-danger" onclick="signOutUser()">Sign Out</button>
+
+				
+			</div>
+			<div class="col-6 text-center" style="padding-top: 20px;">
+
+				<h3>Asunto:</h3>
+				<!--Esto dice que mocion esta en el servidor ahora mismo.-->
+				<div class="card">
+					<div class="card-block text-center">
+						<p id="MocionValue">Loading...</p>
+					</div>
+				</div>
+				<button class="btn btn-warning" id="estadoVotacionalBtn" onclick="apagarOprenderVotos()">Control de votos</button>
+				<button class="btn btn-info" id="cambiarMocionBtn" onclick="CambiarMocion()">Cambiar Mocion</button>
+				<button class="btn btn-info" id="borrarVotosBtn" onclick="deleteVotes()">Borrar Votos</button>
+
+				<br>
+				<br>
+				<br>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="votos-title" scope="col">Favor</th>
+							<th class="votos-title" scope="col">Contra</th>
+							<th class="votos-title" scope="col">Abstenidos</th>
+							<th class="votos-title" scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							
+							<td id="FavorCount" class="votos-text">0</td>
+							<td id="ContraCount" class="votos-text">0</td>
+							<td id="AbstenidoCount" class="votos-text">0</td>
+							<td id="TotalCount" class="votos-text">0</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<button type="button" class="btn btn-info btn-xs" onclick="escrutinio()">Escrutinio</button>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script type="text/javascript" src="js/presidente.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+</body>
+
+</html>

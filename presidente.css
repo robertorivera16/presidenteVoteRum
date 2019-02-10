@@ -1,0 +1,43 @@
+body{
+	background-color: #FFE3A4;
+	font-family: Open Sans;
+}
+
+.title{
+	font-family: Spectral SC;
+}
+
+.jqueryconfirm{
+	background-color: white;
+}
+
+input{
+	
+	border-style: none;
+	background-color: inherit;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5px;
+	border-bottom-color: gray;
+}
+
+
+.card{
+	margin-bottom: 10px;
+}
+.votos-title{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+.votos-text{
+	font-family: sans-serif;
+	
+}
+
+.table{
+	background-color: white;
+	border-radius: 9px;
+}
+
+
+
